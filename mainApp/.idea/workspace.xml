@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e940dae3-3d42-4e92-874b-46f233df6bf6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kk5km1rQqBMRaSrEHScsbqJdEq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.18.4" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.19.6" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/routes" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/routes" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.bin/www">
+    <configuration name="forDocker.mongodb: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="mongodb" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="forDocker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.forDocker.mongodb: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e940dae3-3d42-4e92-874b-46f233df6bf6" name="Default Changelist" comment="" />
+      <created>1606231895194</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606231895194</updated>
+      <workItem from="1606231897196" duration="14282000" />
+      <workItem from="1606833046726" duration="1598000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="2538" height="408" key="GridCell.Tab.0.bottom" timestamp="1606836277584">
+      <screen x="1792" y="-547" width="3840" height="2137" />
+    </state>
+    <state width="2538" height="408" key="GridCell.Tab.0.bottom/1792.-543.3840.2137/41.23.1751.1097@1792.-543.3840.2137" timestamp="1606719326822" />
+    <state width="2538" height="408" key="GridCell.Tab.0.bottom/1792.-547.3840.2137/41.23.1751.1097@1792.-547.3840.2137" timestamp="1606836277584" />
+    <state width="2538" height="408" key="GridCell.Tab.0.bottom/1792.23.3840.2137/41.23.1751.1097@1792.23.3840.2137" timestamp="1606328136633" />
+    <state width="2538" height="408" key="GridCell.Tab.0.center" timestamp="1606836277584">
+      <screen x="1792" y="-547" width="3840" height="2137" />
+    </state>
+    <state width="2538" height="408" key="GridCell.Tab.0.center/1792.-543.3840.2137/41.23.1751.1097@1792.-543.3840.2137" timestamp="1606719326822" />
+    <state width="2538" height="408" key="GridCell.Tab.0.center/1792.-547.3840.2137/41.23.1751.1097@1792.-547.3840.2137" timestamp="1606836277584" />
+    <state width="2538" height="408" key="GridCell.Tab.0.center/1792.23.3840.2137/41.23.1751.1097@1792.23.3840.2137" timestamp="1606328136632" />
+    <state width="2538" height="408" key="GridCell.Tab.0.left" timestamp="1606836277583">
+      <screen x="1792" y="-547" width="3840" height="2137" />
+    </state>
+    <state width="2538" height="408" key="GridCell.Tab.0.left/1792.-543.3840.2137/41.23.1751.1097@1792.-543.3840.2137" timestamp="1606719326822" />
+    <state width="2538" height="408" key="GridCell.Tab.0.left/1792.-547.3840.2137/41.23.1751.1097@1792.-547.3840.2137" timestamp="1606836277583" />
+    <state width="2538" height="408" key="GridCell.Tab.0.left/1792.23.3840.2137/41.23.1751.1097@1792.23.3840.2137" timestamp="1606328136631" />
+    <state width="2538" height="408" key="GridCell.Tab.0.right" timestamp="1606836277584">
+      <screen x="1792" y="-547" width="3840" height="2137" />
+    </state>
+    <state width="2538" height="408" key="GridCell.Tab.0.right/1792.-543.3840.2137/41.23.1751.1097@1792.-543.3840.2137" timestamp="1606719326822" />
+    <state width="2538" height="408" key="GridCell.Tab.0.right/1792.-547.3840.2137/41.23.1751.1097@1792.-547.3840.2137" timestamp="1606836277584" />
+    <state width="2538" height="408" key="GridCell.Tab.0.right/1792.23.3840.2137/41.23.1751.1097@1792.23.3840.2137" timestamp="1606328136632" />
+  </component>
+</project>

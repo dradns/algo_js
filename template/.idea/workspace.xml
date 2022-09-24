@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="461be564-8967-4b1b-b0f1-ff171c3d7f5a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1l98uz0RCoHI2lsobwC2orBqE5V" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dummy/src/pages/main/get-started/customWorkflow" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dummy/src/pages/main/get-started/customWorkflow" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="461be564-8967-4b1b-b0f1-ff171c3d7f5a" name="Default Changelist" comment="" />
+      <created>1606998172545</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606998172545</updated>
+      <workItem from="1606998173631" duration="12601000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="3604" y="488" width="586" height="735" key="find.popup" timestamp="1607245808830">
+      <screen x="1344" y="-547" width="3840" height="2137" />
+    </state>
+    <state x="3604" y="488" width="586" height="735" key="find.popup/1344.-547.3840.2137/36.23.1308.817@1344.-547.3840.2137" timestamp="1607245808830" />
+    <state x="3604" y="488" width="586" height="735" key="find.popup/1344.-547.3840.2137/37.23.1307.817@1344.-547.3840.2137" timestamp="1607243676456" />
+    <state x="3910" y="672" width="670" height="676" key="search.everywhere.popup" timestamp="1607243655752">
+      <screen x="1344" y="-547" width="3840" height="2137" />
+    </state>
+    <state x="3910" y="672" width="670" height="676" key="search.everywhere.popup/1344.-547.3840.2137/37.23.1307.817@1344.-547.3840.2137" timestamp="1607243655752" />
+  </component>
+</project>
