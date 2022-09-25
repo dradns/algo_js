@@ -199,7 +199,7 @@ class DirectedGraph {
             cb(nextKey, this._vertices.get(nextKey));
             this._edges.get(nextKey).forEach((weight, destKey) => {
                 if (!visited.has(destKey)) {
-                    queue.enqueue(destKey);
+                    queue.enqueue(destKey, k);
                     visited.add(destKey);
                 }
             });
@@ -861,7 +861,7 @@ class MinPriorityQueue {
      * @param {number|string|object} value
      * @returns {MinPriorityQueue}
      */
-    enqueue(value) {
+    enqueue(value, k) {
         return this._heap.insert(value);
     }
 
@@ -872,7 +872,7 @@ class MinPriorityQueue {
      * @returns {MinPriorityQueue}
      */
     push(value) {
-        return this.enqueue(value);
+        return this.enqueue(value, k);
     }
 
     /**
@@ -957,8 +957,9 @@ class MinPriorityQueue {
 // You are also given times, a list of travel times as directed edges times[i] = (ui, vi, wi), where ui is the source node, vi is the target node, and wi is the time it takes for a signal to travel from source to target.
 // We will send a signal from a given node k. Return the minimum time it takes for all the n nodes to receive the signal. If it is impossible for all the n nodes to receive the signal, return -1.
 
-let times = [[2,1,44],[2,3,55],[3,4,66]];
-let n = 4;
+let times = [[1,2,33],[2,1,44],[2,3,55],[3,4,66],[7,8,99]];
+
+let n = 8;
 let k = 2;
 
 var networkDelayTime = function(times, n, k) {
@@ -968,30 +969,68 @@ var networkDelayTime = function(times, n, k) {
     let queue = new MinPriorityQueue;
 
     //построить DAT for visited nodes
-    let dat = new Array(n);
+    let distanceToNodes = new Array(n+1);
     //заполняем DAT фолсами
-    for (let i = 0; i < n; i++){
-        dat[i] = false;
+    for (let i = 0; i < n + 1; i++){
+        distanceToNodes[i] = false;
     }
+
+    //создание структуры под adjestency list
+    let adjList = new Array(n+1);
+    for (let i = 0; i < n + 1; i++){
+        adjList[i] = new Array();
+    }
+    //наполнение структуры
+    for (let i = 0; i < times.length; i++){
+        adjList[times[i][0]].push([times[i][1],times[i][2]]);
+    }
+
+    queue.enqueue([0,k]);
+    while (!(queue.isEmpty())){
+        let vertex = queue.pop();
+        let dist = vertex[0];
+        let node = vertex[1];
+        distanceToNodes[node] = dist;
+        console.log(distanceToNodes[node] + ' дистанция от Ктой ноды до каррент ноды');
+        console.log(node + ' порядковый номер ноды');
+
+        let edges = adjList[node];
+        for (let i = 0; i < edges.length; i++){
+            edges[i]//смежная пара {node,weight} для каррент ноды
+            //прийти в distanceToNodes и посмотреть определено ли значение (не фолс)
+                //если значение == false
+                    //
+        }
+    }
+
+
+    // queue.enqueue([-9,k]);
+    // queue.enqueue([9,k]);
+    // console.log(queue.pop());
+    // console.log(queue.pop());
+    // console.log(queue.pop());
 
     // построить взвешенный граф
-    for (let i = 1; i <= n; i++){
-        // console.log(digraph.hasVertex(i));
-        digraph.addVertex(i,i);
-        // console.log(digraph.getVerticesCount());
-        // console.log(digraph.hasVertex(i));
-    }
+    //наполняем несвязанными вершинами
+    // for (let i = 1; i <= n; i++){
+    //     // console.log(digraph.hasVertex(i));
+    //     digraph.addVertex(i,i);
+    //     // console.log(digraph.getVerticesCount());
+    //     // console.log(digraph.hasVertex(i));
+    // }
 
-    for (let i = 0; i < times.length; i++){
-        digraph.addEdge(times[i][0],times[i][1],times[i][2]);
-        // console.log(digraph.getEdgesCount() + " vertices count");
-    }
+    //связываем вершины
+    // for (let i = 0; i < times.length; i++){
+    //     digraph.addEdge(times[i][0],times[i][1],times[i][2]);
+    //     // console.log(digraph.getEdgesCount() + " vertices count");
+    // }
 
     // console.log(digraph.hasEdge(2,1) + " should return true");
     // console.log(digraph.hasEdge(2,99) + " should return false");
 
 
-    dat.forEach(element => console.log(element));
+    //visitedNodes.forEach(element => console.log(element));
+    adjList.forEach(element => console.log(element));
 
 };
 
