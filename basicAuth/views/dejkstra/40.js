@@ -963,74 +963,60 @@ let n = 8;
 let k = 2;
 
 var networkDelayTime = function(times, n, k) {
-    let digraph = new DirectedGraph();
-
     //построить мин приорити кью
     let queue = new MinPriorityQueue;
 
-    //построить DAT for visited nodes
+    //построить DAT for distanceToNodes
     let distanceToNodes = new Array(n+1);
     //заполняем DAT фолсами
     for (let i = 0; i < n + 1; i++){
         distanceToNodes[i] = false;
     }
 
-    //создание структуры под adjestency list
+    //создание adjacency list из массива times
     let adjList = new Array(n+1);
     for (let i = 0; i < n + 1; i++){
-        adjList[i] = new Array();
+        adjList[i] = [];
     }
-    //наполнение структуры
+    //наполнение adjacency list из массива times
     for (let i = 0; i < times.length; i++){
         adjList[times[i][0]].push([times[i][1],times[i][2]]);
     }
 
+    //завести будильник на нулевую (поданную) ноду k
     queue.enqueue([0,k]);
-    while (!(queue.isEmpty())){
+    while (!(queue.isEmpty())){//пока есть заведенные будильники
         let vertex = queue.pop();
         let dist = vertex[0];
         let node = vertex[1];
-        distanceToNodes[node] = dist;
+        distanceToNodes[node] = dist;//констатировать, что расстояние от поданной ноды k до вытащенной из очереди ноды = dist
         console.log(distanceToNodes[node] + ' дистанция от Ктой ноды до каррент ноды');
         console.log(node + ' порядковый номер ноды');
 
-        let edges = adjList[node];
-        for (let i = 0; i < edges.length; i++){
-            edges[i]//смежная пара {node,weight} для каррент ноды
-            //прийти в distanceToNodes и посмотреть определено ли значение (не фолс)
-                //если значение == false
-                    //
+        let edges = adjList[node];//массив смежных пар [node,weight] для каррент ноды
+        console.log(edges[0] + " edges");
+        console.log(edges[1] + " edges");
+        // console.log(edges[3] + " edges");
+        for (let i = 0; i < edges.length; i++){//для каждой пары значений [node, weight] смежной вершины с вытащенной нодой
+            let adjNode = edges[i][0];//порядковый номер смежной ноды
+            let adjWeight = edges[i][1];//вес от каррент ноды до смежной ноды
+            // console.log(adjNode);
+            // console.log(adjWeight);
+            if (distanceToNodes[adjNode] === false){//если для смежной вершины будильник еще не заведен
+                distanceToNodes[adjNode] = dist + adjWeight;//НАДО ПРОВЕРЯТЬ тогда завести его на dist curr node + dist adj node
+            }else{//в противном случае, если будильник заведен
+                let before = distanceToNodes[adjNode];
+                let current = dist + adjWeight;
+                if (before > current){
+                    before = current;
+                }
+                distanceToNodes[adjNode] = before;
+            }
         }
     }
-
-
-    // queue.enqueue([-9,k]);
-    // queue.enqueue([9,k]);
-    // console.log(queue.pop());
-    // console.log(queue.pop());
-    // console.log(queue.pop());
-
-    // построить взвешенный граф
-    //наполняем несвязанными вершинами
-    // for (let i = 1; i <= n; i++){
-    //     // console.log(digraph.hasVertex(i));
-    //     digraph.addVertex(i,i);
-    //     // console.log(digraph.getVerticesCount());
-    //     // console.log(digraph.hasVertex(i));
-    // }
-
-    //связываем вершины
-    // for (let i = 0; i < times.length; i++){
-    //     digraph.addEdge(times[i][0],times[i][1],times[i][2]);
-    //     // console.log(digraph.getEdgesCount() + " vertices count");
-    // }
-
-    // console.log(digraph.hasEdge(2,1) + " should return true");
-    // console.log(digraph.hasEdge(2,99) + " should return false");
-
-
+    //проверить что обошел все вершины
     //visitedNodes.forEach(element => console.log(element));
-    adjList.forEach(element => console.log(element));
+    // adjList.forEach(element => console.log(element));
 
 };
 
